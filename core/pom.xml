@@ -23,6 +23,13 @@
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
+        <!--        TODO: per ora non serve-->
+        <!--        <dependency>-->
+        <!--            <groupId>eu.sia.meda</groupId>-->
+        <!--            <artifactId>meda-arch-core</artifactId>-->
+        <!--            <type>test-jar</type>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
     </dependencies>
 
 </project>
