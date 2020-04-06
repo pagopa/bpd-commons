@@ -234,11 +234,10 @@ public abstract class BaseCrudJpaDAOTest<D extends CrudJpaDAO<E, K>, E extends S
         compare(entity, entityUpdated);
 
         clearContext(entityUpdated);
-        foundEntity = getDao().findById(getId(entity));
+        foundEntity = getDao().findById(getId(entityUpdated));
 
         Assert.assertTrue(foundEntity.isPresent());
-        entityUpdated = foundEntity.get();
-        compare(entity, entityUpdated);
+        compare(entityUpdated, foundEntity.get());
 
         if (entity instanceof BaseEntity) {
             BaseEntity baseEntity = (BaseEntity) entity;

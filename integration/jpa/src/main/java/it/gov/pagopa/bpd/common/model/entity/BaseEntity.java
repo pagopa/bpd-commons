@@ -12,6 +12,7 @@ import java.time.ZonedDateTime;
 
 @MappedSuperclass
 @Data
+@Where(clause = "ENABLED_B = 'TRUE'")
 public abstract class BaseEntity implements Serializable {
 
     @Column(name = "INSERT_DATE_T")
@@ -27,7 +28,6 @@ public abstract class BaseEntity implements Serializable {
     private String updateUser;
 
     @Column(name = "ENABLED_B")
-    @Where(clause = "ENABLED_B = 'TRUE'")
     private boolean enabled = true;
 
     @PrePersist
