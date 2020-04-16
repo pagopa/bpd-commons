@@ -14,10 +14,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-jpa</artifactId>
         </dependency>
