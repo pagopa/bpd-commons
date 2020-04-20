@@ -8,7 +8,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 
 @MappedSuperclass
 @Data
@@ -16,13 +16,13 @@ import java.time.ZonedDateTime;
 public abstract class BaseEntity implements Serializable {
 
     @Column(name = "INSERT_DATE_T")
-    private ZonedDateTime insertDate;
+    private OffsetDateTime insertDate;
 
     @Column(name = "INSERT_USER_S")
     private String insertUser;
 
     @Column(name = "UPDATE_DATE_T")
-    private ZonedDateTime updateDate;
+    private OffsetDateTime updateDate;
 
     @Column(name = "UPDATE_USER_S")
     private String updateUser;
@@ -32,12 +32,12 @@ public abstract class BaseEntity implements Serializable {
 
     @PrePersist
     protected void onCreate() {
-        insertDate = ZonedDateTime.now();
+        insertDate = OffsetDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updateDate = ZonedDateTime.now();
+        updateDate = OffsetDateTime.now();
     }
 
 }
