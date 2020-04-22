@@ -14,10 +14,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>eu.sia.meda</groupId>
-            <artifactId>meda-arch-utils</artifactId>
-            <type>test-jar</type>
-            <scope>test</scope>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
         </dependency>
     </dependencies>
 
