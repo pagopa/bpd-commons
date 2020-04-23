@@ -17,17 +17,4 @@
         <module>event</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>it.gov.pagopa.bpd.commons</groupId>
-            <artifactId>bpd-commons-base</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>it.gov.pagopa.bpd.commons</groupId>
-            <artifactId>bpd-commons-base</artifactId>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
 </project>
