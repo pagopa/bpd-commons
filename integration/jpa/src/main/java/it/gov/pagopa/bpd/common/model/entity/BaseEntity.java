@@ -1,7 +1,6 @@
 package it.gov.pagopa.bpd.common.model.entity;
 
 import lombok.Data;
-import org.hibernate.annotations.Where;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
@@ -12,7 +11,6 @@ import java.time.OffsetDateTime;
 
 @MappedSuperclass
 @Data
-@Where(clause = "ENABLED_B = 'TRUE'")
 public abstract class BaseEntity implements Serializable {
 
     @Column(name = "INSERT_DATE_T")

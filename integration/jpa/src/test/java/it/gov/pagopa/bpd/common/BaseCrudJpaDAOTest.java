@@ -25,7 +25,7 @@ import java.util.Optional;
 import java.util.function.Function;
 
 
-public abstract class BaseCrudJpaDAOTest<D extends CrudJpaDAO<E, K>, E extends Serializable, K extends Serializable>
+public abstract class BaseCrudJpaDAOTest<D extends CrudJpaDAO<E, K>, E extends BaseEntity, K extends Serializable>
         extends BaseJpaIntegrationTest {
 
     protected final Class<D> daoClass;
@@ -294,6 +294,7 @@ public abstract class BaseCrudJpaDAOTest<D extends CrudJpaDAO<E, K>, E extends S
      */
     protected E getMockedEntity(int bias) throws IllegalAccessException, InstantiationException {
         E e = TestUtils.mockInstance(entityClass.newInstance(), bias);
+        e.setEnabled(true);
         return e;
     }
 
