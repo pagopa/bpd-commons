@@ -5,7 +5,6 @@ import javax.validation.ConstraintValidatorContext;
 import java.time.Duration;
 import java.time.OffsetDateTime;
 
-//public class FutureOrPresentValidatorForOffsetDateTimeWithTolerance extends FutureOrPresentValidatorForOffsetDateTime {
 public class FutureOrPresentValidatorForOffsetDateTimeWithTolerance
         implements ConstraintValidator<FutureOrPresentWithTolerance, OffsetDateTime> {
 
@@ -20,30 +19,14 @@ public class FutureOrPresentValidatorForOffsetDateTimeWithTolerance
 
     @Override
     public boolean isValid(OffsetDateTime value, ConstraintValidatorContext context) {
-        final OffsetDateTime now = OffsetDateTime.now(context.getClockProvider().getClock());
+        boolean result = true;
 
-        return value.isAfter(now.minus(Duration.ofMinutes(tollerance)));
+        if (value != null) {
+            final OffsetDateTime now = OffsetDateTime.now(context.getClockProvider().getClock());
+            result = value.isAfter(now.minus(Duration.ofMinutes(tollerance)));
+        }
+
+        return result;
     }
-
-//    @Override
-//    public void initialize(ConstraintDescriptor<FutureOrPresentWithTolerance> constraintDescriptor, HibernateConstraintValidatorInitializationContext initializationContext) {
-//        tollerance = constraintDescriptor.getAnnotation().tolerance();
-//        super.initialize(constraintDescriptor, initializationContext);
-//    }
-//
-//    @Override
-//    protected Duration getEffectiveTemporalValidationTolerance(Duration duration) {
-//        return duration.plus(Duration.ofMinutes(tollerance)).negated();
-//    }
-//
-//    @Override
-//    protected OffsetDateTime getReferenceValue(Clock clock) {
-//        return OffsetDateTime.now(clock);
-//    }
-//
-//    @Override
-//    protected boolean isValid(int result) {
-//        return result >= 0;
-//    }
 
 }
