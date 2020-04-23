@@ -13,16 +13,6 @@
     <artifactId>bpd-commons-core</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>it.gov.pagopa.bpd.commons</groupId>
-            <artifactId>bpd-commons-base</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>it.gov.pagopa.bpd.commons</groupId>
-            <artifactId>bpd-commons-base</artifactId>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
         <!--        TODO: per ora non serve-->
         <!--        <dependency>-->
         <!--            <groupId>eu.sia.meda</groupId>-->
