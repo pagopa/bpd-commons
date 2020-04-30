@@ -12,7 +12,11 @@ public abstract class ResourceNotFoundException extends MedaDomainRuntimeExcepti
 
 
     public <K extends Serializable> ResourceNotFoundException(Class<?> resourceClass, K id) {
-        super(getMessage(resourceClass, id), CODE, STATUS);
+        this(getMessage(resourceClass, id));
+    }
+
+    public <K extends Serializable> ResourceNotFoundException(String message) {
+        super(message, CODE, STATUS);
     }
 
     private static String getMessage(Class<?> resourceClass, Object id) {
@@ -20,3 +24,4 @@ public abstract class ResourceNotFoundException extends MedaDomainRuntimeExcepti
     }
 
 }
+
