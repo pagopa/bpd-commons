@@ -22,10 +22,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-<!--        FIXME: take this deps indirectly from bpd-commons-base test-jar-->
+<!--        FIXME: remove deps and move ReflectionUtils inside common-base after removing meda-jpa and meda-rest module-->
         <dependency>
             <groupId>eu.sia.meda</groupId>
-            <artifactId>meda-arch-utils</artifactId>
+            <artifactId>meda-arch-core</artifactId>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
