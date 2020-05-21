@@ -6,6 +6,7 @@ import lombok.SneakyThrows;
 import org.junit.ClassRule;
 import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.openfeign.FeignAutoConfiguration;
 import org.springframework.context.ApplicationContextInitializer;
@@ -69,7 +70,7 @@ public abstract class BaseFeignRestClientTest {
     }
 
     @Configuration
-    @ImportAutoConfiguration(FeignAutoConfiguration.class)
+    @ImportAutoConfiguration({FeignAutoConfiguration.class, HttpMessageConvertersAutoConfiguration.class})
     static class ContextConfiguration {
     }
 

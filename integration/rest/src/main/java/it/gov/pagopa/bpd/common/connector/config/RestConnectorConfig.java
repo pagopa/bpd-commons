@@ -8,7 +8,6 @@ import it.gov.pagopa.bpd.common.connector.interceptor.QueryParamsPlusEncoderInte
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.support.ResponseEntityDecoder;
 import org.springframework.cloud.openfeign.support.SpringDecoder;
 import org.springframework.cloud.openfeign.support.SpringEncoder;
@@ -18,7 +17,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
 @Configuration
-@EnableFeignClients(basePackages = "it.gov.pagopa.bpd")
 @PropertySource("classpath:config/rest-client.properties")
 public class RestConnectorConfig {
 
