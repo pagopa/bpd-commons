@@ -12,5 +12,11 @@
     <groupId>it.gov.pagopa.bpd.commons.api</groupId>
     <artifactId>bpd-commons-api-rest</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>eu.sia.meda</groupId>
+            <artifactId>meda-arch-core</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

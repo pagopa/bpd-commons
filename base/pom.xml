@@ -14,9 +14,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
+            <groupId>eu.sia.meda</groupId>
+            <artifactId>meda-arch-error</artifactId>
         </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>javax.validation</groupId>-->
+        <!--            <artifactId>validation-api</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
 </project>
