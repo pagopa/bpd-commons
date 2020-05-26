@@ -17,11 +17,6 @@
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-jpa</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
 <!--        FIXME: remove deps and move ReflectionUtils inside common-base after removing meda-jpa and meda-rest module-->
         <dependency>
             <groupId>eu.sia.meda</groupId>

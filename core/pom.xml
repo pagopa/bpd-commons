@@ -13,6 +13,11 @@
     <artifactId>bpd-commons-core</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!--        TODO: per ora non serve-->
         <!--        <dependency>-->
         <!--            <groupId>eu.sia.meda</groupId>-->
