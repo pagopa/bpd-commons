@@ -1,12 +1,11 @@
-package it.gov.pagopa.bpd.common;
+package it.gov.pagopa.bpd.common.connector.jpa;
 
-import eu.sia.meda.connector.jpa.CrudJpaDAO;
 import eu.sia.meda.layers.connector.query.CriteriaFilter;
 import eu.sia.meda.layers.connector.query.CriteriaQuery;
 import eu.sia.meda.util.ColoredPrinters;
 import eu.sia.meda.util.ReflectionUtils;
 import eu.sia.meda.util.TestUtils;
-import it.gov.pagopa.bpd.common.model.entity.BaseEntity;
+import it.gov.pagopa.bpd.common.connector.jpa.model.BaseEntity;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

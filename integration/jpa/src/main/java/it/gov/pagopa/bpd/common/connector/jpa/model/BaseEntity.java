@@ -1,4 +1,4 @@
-package it.gov.pagopa.bpd.common.model.entity;
+package it.gov.pagopa.bpd.common.connector.jpa.model;
 
 import lombok.Data;
 
