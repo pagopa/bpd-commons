@@ -11,7 +11,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Import(BaseInterceptorConfiguration.class)
 public class Config implements WebMvcConfigurer {
 
-
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addFormatterForFieldAnnotation(new UpperCaseFormatterFactory());
