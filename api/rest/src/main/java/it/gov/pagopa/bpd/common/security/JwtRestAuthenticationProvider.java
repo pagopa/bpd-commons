@@ -17,7 +17,7 @@ import java.util.ArrayList;
 @Slf4j
 public class JwtRestAuthenticationProvider implements AuthenticationProvider {
 
-    @Value("${it.gov.pagopa.security.jwt.auth.url}")
+    @Value("${it.gov.pagopa.security.jwt.auth.url:#{null}}")
     private String jwtAuthUrl;
 
     @Override
