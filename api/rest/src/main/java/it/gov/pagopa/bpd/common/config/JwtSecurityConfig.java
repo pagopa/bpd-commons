@@ -11,11 +11,14 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.BeanIds;
+import org.springframework.security.config.annotation.web.HttpSecurityBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Configuration
@@ -28,8 +31,8 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
     private boolean jpaMocked;
     @Value("${spring.h2.console.enabled:false}")
     private boolean h2ConsoleEnabled;
-    @Value("${it.gov.pagopa.security.patterns}")
-    private String jwtAuthPatterns;
+    @Value("#{'${it.gov.pagopa.security.patterns}'.split(',')}")
+    private List<String> jwtAuthPatterns;
 
     private final JwtRestAuthenticationProvider authProvider;
 
@@ -45,15 +48,20 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().headers().cacheControl();
 
-        JwtAuthenticationFilter jwtAuthenticationFilter =
-                new JwtAuthenticationFilter(new AntPathRequestMatcher(jwtAuthPatterns));
-        jwtAuthenticationFilter.setAuthenticationManager(authenticationManager());
-
-        http.authorizeRequests()
+        HttpSecurityBuilder httpSecurityBuilder =
+                http.authorizeRequests()
                 .antMatchers("/**").permitAll()
-                .antMatchers(jwtAuthPatterns).authenticated().and()
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                .authenticationProvider(authProvider);
+                .antMatchers(jwtAuthPatterns.toArray(new String[jwtAuthPatterns.size()])).authenticated().and();
+
+        for (String jwtAuthPattern : jwtAuthPatterns) {
+            JwtAuthenticationFilter jwtAuthenticationFilter =
+                    new JwtAuthenticationFilter(new AntPathRequestMatcher(jwtAuthPattern));
+            jwtAuthenticationFilter.setAuthenticationManager(authenticationManager());
+            httpSecurityBuilder = httpSecurityBuilder
+                    .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+        }
+
+        httpSecurityBuilder.authenticationProvider(authProvider);
 
         if(jpaMocked && h2ConsoleEnabled){
             http.headers().frameOptions().disable();
