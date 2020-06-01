@@ -2,6 +2,7 @@ package it.gov.pagopa.bpd.common.security;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,12 +21,17 @@ public class JwtRestAuthenticationProvider implements AuthenticationProvider {
     @Value("${it.gov.pagopa.security.jwt.auth.url:#{null}}")
     private String jwtAuthUrl;
 
+    private final RestTemplate restTemplate;
+
+    public JwtRestAuthenticationProvider(RestTemplateBuilder restTemplateBuilder) {
+        restTemplate = restTemplateBuilder.build();
+    }
+
     @Override
     public Authentication authenticate (Authentication authentication)
       throws AuthenticationException {
 
         try {
-            RestTemplate restTemplate = new RestTemplate();
             String token = String.valueOf(authentication.getPrincipal());
             UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(jwtAuthUrl)
                     .queryParam("token", token);
