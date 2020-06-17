@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
 
-public abstract class ResourceNotFoundException extends MedaDomainRuntimeException {
+public class ResourceNotFoundException extends MedaDomainRuntimeException {
 
     private static final String CODE = "resource.not-found.error";
     private static final HttpStatus STATUS = HttpStatus.NOT_FOUND;
@@ -15,7 +15,7 @@ public abstract class ResourceNotFoundException extends MedaDomainRuntimeExcepti
         this(getMessage(resourceClass, id));
     }
 
-    public <K extends Serializable> ResourceNotFoundException(String message) {
+    public ResourceNotFoundException(String message) {
         super(message, CODE, STATUS);
     }
 
