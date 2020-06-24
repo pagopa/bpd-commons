@@ -4,29 +4,73 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- develop
+  branches:
+    include:
+      - master
+      - develop
+      - features/*
+  paths:
+    include:
+      - api/*
+      - app/*
+      - core/*
+      - integration/*
+      - pom.xml
 
-pool:
-  vmImage: 'ubuntu-latest'
+resources:
+- repo: self
 
-steps:
-- task: DownloadSecureFile@1
-  displayName: 'download settings.xml for Maven'
-  name: settingsxml
-  inputs:
-    secureFile: 'settings.xml'
-    retryCount: '2'
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'clean deploy'
-    options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
-    publishJUnitResults: true
-    testResultsFiles: 
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    mavenVersionOption: 'Default'
-    mavenOptions: '-Xmx3072m'
-    mavenAuthenticateFeed: true
-    effectivePomSkip: true
-    sonarQubeRunAnalysis: false
+variables:
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+#steps:
+#- task: DownloadSecureFile@1
+#  displayName: 'download settings.xml for Maven'
+#  name: settingsxml
+#  inputs:
+#    secureFile: 'settings.xml'
+#    retryCount: '2'
+#- task: Maven@3
+#  inputs:
+#    mavenPomFile: 'pom.xml'
+#    goals: 'clean deploy'
+#    options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
+#    publishJUnitResults: true
+#    testResultsFiles: 
+#    javaHomeOption: 'JDKVersion'
+#    jdkVersionOption: '1.8'
+#    mavenVersionOption: 'Default'
+#    mavenOptions: '-Xmx3072m'
+#    mavenAuthenticateFeed: true
+#    effectivePomSkip: true
+#    sonarQubeRunAnalysis: false
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: DownloadSecureFile@1
+      displayName: 'download settings.xml for Maven'
+      name: settingsxml
+      inputs:
+        secureFile: 'settings.xml'
+        retryCount: '2'
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'deploy'
+        options: '-s $(settingsxml.secureFilePath)'
+        publishJUnitResults: false
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        mavenVersionOption: 'Default'
+        mavenOptions: '-Xmx3072m'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: true
+        sonarQubeRunAnalysis: false
