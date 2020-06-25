@@ -48,6 +48,8 @@ stages:
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         codeCoverageToolOption: 'JaCoCo'
+        codeCoverageClassFilesDirectories: '**/target/classes'
+        codeCoverageSourceDirectories: '**/src/java'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
         mavenVersionOption: 'Default'
