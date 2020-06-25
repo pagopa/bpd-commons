@@ -24,27 +24,6 @@ variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
-#steps:
-#- task: DownloadSecureFile@1
-#  displayName: 'download settings.xml for Maven'
-#  name: settingsxml
-#  inputs:
-#    secureFile: 'settings.xml'
-#    retryCount: '2'
-#- task: Maven@3
-#  inputs:
-#    mavenPomFile: 'pom.xml'
-#    goals: 'clean deploy'
-#    options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
-#    publishJUnitResults: true
-#    testResultsFiles: 
-#    javaHomeOption: 'JDKVersion'
-#    jdkVersionOption: '1.8'
-#    mavenVersionOption: 'Default'
-#    mavenOptions: '-Xmx3072m'
-#    mavenAuthenticateFeed: true
-#    effectivePomSkip: true
-#    sonarQubeRunAnalysis: false
 
 stages:
 - stage: Build
