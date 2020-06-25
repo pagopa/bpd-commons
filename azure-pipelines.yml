@@ -48,6 +48,7 @@ stages:
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         codeCoverageToolOption: 'JaCoCo'
+        codeCoverageClassFilter: '-:**.*Config'
         codeCoverageClassFilesDirectories: 'api/rest/target/classes,base/target/classes,integration/jpa/target/classes,integration/rest/target/classes'
         codeCoverageSourceDirectories: 'api/rest/src/main/java,base/src/main/java,integration/jpa/src/main/java,integration/rest/src/main/java'
         javaHomeOption: 'JDKVersion'
