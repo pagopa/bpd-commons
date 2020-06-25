@@ -46,6 +46,8 @@ stages:
         goals: 'deploy'
         options: '-s $(settingsxml.secureFilePath)'
         publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        codeCoverageToolOption: 'JaCoCo'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
         mavenVersionOption: 'Default'
