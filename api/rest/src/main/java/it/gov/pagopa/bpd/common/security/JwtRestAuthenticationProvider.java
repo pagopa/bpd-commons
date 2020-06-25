@@ -1,5 +1,6 @@
 package it.gov.pagopa.bpd.common.security;
 
+import it.gov.pagopa.bpd.common.security.model.UserResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -36,10 +37,10 @@ public class JwtRestAuthenticationProvider implements AuthenticationProvider {
             UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(jwtAuthUrl)
                     .queryParam("token", token);
             String uriBuilder = builder.build().encode().toUriString();
-            ResponseEntity<String> responseEntity = restTemplate.getForEntity(uriBuilder, String.class);
+            ResponseEntity<UserResponse> responseEntity = restTemplate.getForEntity(uriBuilder, UserResponse.class);
             if (responseEntity.getStatusCode().is2xxSuccessful()) {
                 return new UsernamePasswordAuthenticationToken(
-                        responseEntity.getBody(), null, new ArrayList<>());
+                        responseEntity.getBody().getFiscalCode(), null, new ArrayList<>());
             }
         } catch (Exception e) {
             if (log.isErrorEnabled()) {
@@ -54,6 +55,5 @@ public class JwtRestAuthenticationProvider implements AuthenticationProvider {
     public boolean supports(Class<?> authentication){
         return authentication.equals(JwtAuthenticationToken.class);
     }
-
 
 }
