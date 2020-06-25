@@ -48,9 +48,7 @@ stages:
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         codeCoverageToolOption: 'JaCoCo'
-        codeCoverageClassFilter: '-:**.*Config'
-        codeCoverageClassFilesDirectories: 'api/rest/target/classes,base/target/classes,integration/jpa/target/classes,integration/rest/target/classes'
-        codeCoverageSourceDirectories: 'api/rest/src/main/java,base/src/main/java,integration/jpa/src/main/java,integration/rest/src/main/java'
+        codeCoverageClassFilter: '+:it.gov.pagopa.bpd.common.**,-:**.*Config,-:**.model.**,-:**.*Constants'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
         mavenVersionOption: 'Default'
