@@ -18,7 +18,15 @@ trigger:
       - pom.xml
 
 resources:
-- repo: self
+  pipelines:
+  - pipeline: bpdMsStarterParent
+    source: pagopa.bpd-ms-starter-parent
+    trigger: 
+      branches:
+        include: 
+        - master
+        - develop
+        - features/*
 
 variables:
   # Agent VM image name
