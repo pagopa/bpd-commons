@@ -1,6 +1,8 @@
 package it.gov.pagopa.bpd.common.security;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.sia.meda.BaseSpringTest;
+import it.gov.pagopa.bpd.common.security.model.UserResponse;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,6 +34,9 @@ public class JwtRestAuthenticationProviderTest extends BaseSpringTest {
     @Autowired
     private MockRestServiceServer mockRestServiceServer;
 
+    @Autowired
+    ObjectMapper objectMapper;
+
     @Before
     public void setUp() {
         this.mockRestServiceServer.reset();
@@ -43,7 +48,10 @@ public class JwtRestAuthenticationProviderTest extends BaseSpringTest {
             UriComponentsBuilder builder = UriComponentsBuilder.fromUriString("/auth/test")
                     .queryParam("token", "123456");
             this.mockRestServiceServer.expect(requestTo(builder.toUriString()))
-                    .andRespond(withSuccess("testCF", MediaType.APPLICATION_JSON));
+                    .andRespond(withSuccess(
+                            objectMapper.writeValueAsString(
+                                    UserResponse.builder().fiscalCode("testCF").build())
+                            , MediaType.APPLICATION_JSON));
             Authentication authentication = jwtRestAuthenticationProvider.authenticate(
                     new JwtAuthenticationToken("123456"));
             Assert.assertNotNull(authentication);
