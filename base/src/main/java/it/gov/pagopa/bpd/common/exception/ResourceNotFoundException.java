@@ -12,16 +12,19 @@ public class ResourceNotFoundException extends MedaDomainRuntimeException {
 
 
     public <K extends Serializable> ResourceNotFoundException(Class<?> resourceClass, K id) {
-        this(getMessage(resourceClass, id));
+        this(getMessage(resourceClass.getSimpleName(), id));
+    }
+
+    public <K extends Serializable> ResourceNotFoundException(String resourceName, K id) {
+        super(getMessage(resourceName, id), CODE, STATUS);
     }
 
     public ResourceNotFoundException(String message) {
         super(message, CODE, STATUS);
     }
 
-    private static String getMessage(Class<?> resourceClass, Object id) {
-        return String.format("Unable to find %s with id %s", resourceClass.getSimpleName(), id);
+    private static String getMessage(String resourceName, Object id) {
+        return String.format("%s with id %s is not enabled", resourceName, id);
     }
-
 }
 
