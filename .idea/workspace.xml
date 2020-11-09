@@ -20,82 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f25fc971-714d-407f-911d-6fc264bb111b" name="Default Changelist" comment="[bpd-ms-commons/develop] Updated pom.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/event/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/event/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/rest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azure-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/azure-pipelines.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/integration/jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/jpa/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/integration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/integration/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/rest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="599924e3-944b-4f28-a99a-b1f193072bfa" name="[maven-release-plugin] prepare for next development iteration" comment="" />
-    <list id="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" name="[maven-release-plugin] prepare release 1.0.1" comment="">
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/rest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration/jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/jpa/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/rest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list id="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" name="[maven-release-plugin] prepare release 1.0.1" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/api/pom.xml">
-      <ranges>
-        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
-        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-        <range start1="37" end1="38" start2="35" end2="35" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/integration/pom.xml">
-      <ranges>
-        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
-        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-        <range start1="37" end1="38" start2="35" end2="35" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/integration/rest/pom.xml">
-      <ranges>
-        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
-        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/api/rest/pom.xml">
-      <ranges>
-        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
-        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/base/pom.xml">
-      <ranges>
-        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
-        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-        <range start1="27" end1="28" start2="25" end2="25" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/integration/jpa/pom.xml">
-      <ranges>
-        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
-        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/pom.xml">
-      <ranges>
-        <range start1="1" end1="3" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
-        <range start1="24" end1="25" start2="23" end2="25" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
-      </ranges>
-    </file>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1a9qkgiUzQg78F65jPzX4u3n0O9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
@@ -161,22 +121,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="[bpd-ms-commons/develop] Updated pom.xml" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1604937436431">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604941259029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
-    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1604937436431">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604941259029" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604941259029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
-    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1604937436431">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604941259029" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604941259029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
-    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1604937436431">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604941259029" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604941259029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604941259029" />
     <state x="435" y="115" key="RollbackChangesDialog" timestamp="1604937391638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -185,10 +145,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="327" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1604937578294" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1604937663559">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1604938313350">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604937663559" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604938313350" />
     <state x="478" y="145" width="635" height="534" key="find.popup" timestamp="1604936072323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
