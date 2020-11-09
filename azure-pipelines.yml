@@ -31,6 +31,8 @@ resources:
 variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
+  toDeploy: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
+
 
 
 stages:
@@ -51,12 +53,25 @@ stages:
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'deploy'
+        goals: 'clean test'
         options: '-s $(settingsxml.secureFilePath)'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         codeCoverageToolOption: 'JaCoCo'
         codeCoverageClassFilter: '+:it.gov.pagopa.bpd.**,-:**.*Config,-:**.model.**,-:**.enums.**,-:**.*Constants,-:**.*Application,-:**.*Test'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        mavenVersionOption: 'Default'
+        mavenOptions: '-Xmx3072m'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: true
+        sonarQubeRunAnalysis: false
+    - task: Maven@3
+      condition: eq(variables.toDeploy,true)
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'deploy'
+        options: '-s $(settingsxml.secureFilePath) -DskipTests=true'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
         mavenVersionOption: 'Default'
