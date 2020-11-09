@@ -18,6 +18,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>eu.sia.meda</groupId>
+            <artifactId>meda-arch-core</artifactId>
+            <type>test-jar</type>
+            <version>1.0.1</version>
+        </dependency>
     </dependencies>
 
 </project>
