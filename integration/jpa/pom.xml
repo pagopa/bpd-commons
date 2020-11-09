@@ -21,11 +21,13 @@
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-core</artifactId>
+            <version>1.0.1</version>
         </dependency>
         <!--        FIXME: remove deps and move ReflectionUtils inside common-base after removing meda-jpa and meda-rest module-->
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-core</artifactId>
+            <version>1.0.1</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>

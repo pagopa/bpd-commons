@@ -16,6 +16,7 @@
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-core</artifactId>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
