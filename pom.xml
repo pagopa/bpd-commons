@@ -15,7 +15,7 @@
     <modules>
         <module>base</module>
         <module>integration</module>
-        <module>core</module>
+<!--        <module>core</module>-->
         <module>api</module>
     </modules>
     <packaging>pom</packaging>
