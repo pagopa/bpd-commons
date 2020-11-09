@@ -18,59 +18,64 @@ trigger:
       - pom.xml
 
 resources:
-- repo: self
+  pipelines:
+    - pipeline: bpdMsStarterParent
+      source: pagopa.bpd-ms-starter-parent
+      trigger:
+        branches:
+          include:
+            - master
+            - develop
+            - features/*
 
 variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
+  toDeploy: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
 
-#steps:
-#- task: DownloadSecureFile@1
-#  displayName: 'download settings.xml for Maven'
-#  name: settingsxml
-#  inputs:
-#    secureFile: 'settings.xml'
-#    retryCount: '2'
-#- task: Maven@3
-#  inputs:
-#    mavenPomFile: 'pom.xml'
-#    goals: 'clean deploy'
-#    options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
-#    publishJUnitResults: true
-#    testResultsFiles: 
-#    javaHomeOption: 'JDKVersion'
-#    jdkVersionOption: '1.8'
-#    mavenVersionOption: 'Default'
-#    mavenOptions: '-Xmx3072m'
-#    mavenAuthenticateFeed: true
-#    effectivePomSkip: true
-#    sonarQubeRunAnalysis: false
+
 
 stages:
-- stage: Build
-  displayName: Build stage
-  jobs:  
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - task: DownloadSecureFile@1
-      displayName: 'download settings.xml for Maven'
-      name: settingsxml
-      inputs:
-        secureFile: 'settings.xml'
-        retryCount: '2'
-    - task: Maven@3
-      inputs:
-        mavenPomFile: 'pom.xml'
-        goals: 'deploy'
-        options: '-s $(settingsxml.secureFilePath)'
-        publishJUnitResults: false
-        javaHomeOption: 'JDKVersion'
-        jdkVersionOption: '1.8'
-        mavenVersionOption: 'Default'
-        mavenOptions: '-Xmx3072m'
-        mavenAuthenticateFeed: false
-        effectivePomSkip: true
-        sonarQubeRunAnalysis: false
+  - stage: Build
+    displayName: Build stage
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: $(vmImageName)
+        steps:
+          - task: DownloadSecureFile@1
+            displayName: 'download settings.xml for Maven'
+            name: settingsxml
+            inputs:
+              secureFile: 'settings.xml'
+              retryCount: '2'
+          - task: Maven@3
+            inputs:
+              mavenPomFile: 'pom.xml'
+              goals: 'clean test'
+              options: '-s $(settingsxml.secureFilePath)'
+              publishJUnitResults: true
+              testResultsFiles: '**/surefire-reports/TEST-*.xml'
+              codeCoverageToolOption: 'JaCoCo'
+              codeCoverageClassFilter: '+:it.gov.pagopa.bpd.**,-:**.*Config,-:**.model.**,-:**.enums.**,-:**.*Constants,-:**.*Application,-:**.*Test'
+              javaHomeOption: 'JDKVersion'
+              jdkVersionOption: '1.8'
+              mavenVersionOption: 'Default'
+              mavenOptions: '-Xmx3072m'
+              mavenAuthenticateFeed: false
+              effectivePomSkip: true
+              sonarQubeRunAnalysis: false
+          - task: Maven@3
+            condition: eq(variables.toDeploy,true)
+            inputs:
+              mavenPomFile: 'pom.xml'
+              goals: 'deploy'
+              options: '-s $(settingsxml.secureFilePath) -DskipTests=true'
+              javaHomeOption: 'JDKVersion'
+              jdkVersionOption: '1.8'
+              mavenVersionOption: 'Default'
+              mavenOptions: '-Xmx3072m'
+              mavenAuthenticateFeed: false
+              effectivePomSkip: true
+              sonarQubeRunAnalysis: false

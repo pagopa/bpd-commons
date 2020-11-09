@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f25fc971-714d-407f-911d-6fc264bb111b" name="Default Changelist" comment="[bpd-ms-commons/develop] Updated pom.xml">
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/azure-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/azure-pipelines.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/jpa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <list id="599924e3-944b-4f28-a99a-b1f193072bfa" name="[maven-release-plugin] prepare for next development iteration" comment="" />
+    <list id="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" name="[maven-release-plugin] prepare release 1.0.1" comment="">
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/jpa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/integration/rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/api/pom.xml">
+      <ranges>
+        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
+        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+        <range start1="37" end1="38" start2="35" end2="35" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/integration/pom.xml">
+      <ranges>
+        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
+        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+        <range start1="37" end1="38" start2="35" end2="35" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/integration/rest/pom.xml">
+      <ranges>
+        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
+        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/api/rest/pom.xml">
+      <ranges>
+        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
+        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/base/pom.xml">
+      <ranges>
+        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
+        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+        <range start1="27" end1="28" start2="25" end2="25" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/integration/jpa/pom.xml">
+      <ranges>
+        <range start1="1" end1="4" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
+        <range start1="7" end1="8" start2="5" end2="6" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/pom.xml">
+      <ranges>
+        <range start1="1" end1="3" start2="1" end2="2" changelist="f25fc971-714d-407f-911d-6fc264bb111b" />
+        <range start1="24" end1="25" start2="23" end2="25" changelist="06cdb2c7-4f1e-41aa-a0b7-4c35092537c8" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectId" id="1a9qkgiUzQg78F65jPzX4u3n0O9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f25fc971-714d-407f-911d-6fc264bb111b" name="Default Changelist" comment="" />
+      <created>1586158301363</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586158301363</updated>
+    </task>
+    <task id="LOCAL-00001" summary="[bpd-ms-commons/develop] Updated gitignore">
+      <created>1604935298988</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604935298988</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[bpd-ms-commons/develop] Updated pom.xml">
+      <created>1604935476991</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604935476991</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[bpd-ms-commons/develop] Updated pom.xml">
+      <created>1604936002542</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604936002542</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[bpd-ms-commons/develop] Updated pom.xml">
+      <created>1604937411349</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604937411349</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[bpd-ms-commons/develop] Updated gitignore" />
+    <MESSAGE value="[bpd-ms-commons/develop] Updated pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="[bpd-ms-commons/develop] Updated pom.xml" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1604937436431">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
+    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1604937436431">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
+    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1604937436431">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
+    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1604937436431">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604937436431" />
+    <state x="435" y="115" key="RollbackChangesDialog" timestamp="1604937391638">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="435" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604937391638" />
+    <state x="618" y="327" key="VCS.ChangelistChooser" timestamp="1604937578294">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="327" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1604937578294" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1604937663559">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604937663559" />
+    <state x="478" y="145" width="635" height="534" key="find.popup" timestamp="1604936072323">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="145" width="635" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1604936072323" />
+  </component>
+</project>
