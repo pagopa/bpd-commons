@@ -20,4 +20,8 @@
     </modules>
     <packaging>pom</packaging>
 
+    <scm>
+        <developerConnection>scm:git:https://github.com/pagopa/bpd-commons.git</developerConnection>
+    </scm>
+
 </project>
