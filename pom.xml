@@ -10,7 +10,7 @@
 
     <groupId>it.gov.pagopa.bpd</groupId>
     <artifactId>bpd-commons</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <modules>
         <module>base</module>
         <module>integration</module>

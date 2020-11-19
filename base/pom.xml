@@ -3,7 +3,7 @@
     <parent>
         <artifactId>bpd-commons</artifactId>
         <groupId>it.gov.pagopa.bpd</groupId>
-        <version>1.0.2</version>
+        <version>1.0.3-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,13 +14,11 @@
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-error</artifactId>
-            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>eu.sia.meda</groupId>
             <artifactId>meda-arch-core</artifactId>
             <type>test-jar</type>
-            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
