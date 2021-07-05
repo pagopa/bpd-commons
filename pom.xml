@@ -41,7 +41,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/pagopa/bpd-commons.git</developerConnection>
-        <tag>1.2.1</tag>
+        <tag>1.2.2</tag>
     </scm>
 
 </project>
