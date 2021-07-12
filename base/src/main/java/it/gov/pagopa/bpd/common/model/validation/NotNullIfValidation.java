@@ -1,7 +1,6 @@
 package it.gov.pagopa.bpd.common.model.validation;
 
 import lombok.SneakyThrows;
-import org.apache.commons.beanutils.BeanUtils;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -16,17 +15,16 @@ public class NotNullIfValidation implements ConstraintValidator<EnableNotNullIf,
     @SneakyThrows
     @Override
     public boolean isValid(Object bean, ConstraintValidatorContext ctx) {
-
         final Class<?> clazz = bean.getClass();
         final Field[] fields = clazz.getDeclaredFields();
 
         for (Field field : fields) {
             if (field.isAnnotationPresent(NotNullIfPropertyEqualTo.class)) {
-                if (BeanUtils.getProperty(bean, field.getName()) == null) {
+                if (field.get(bean) == null) {
                     for (NotNullIfPropertyEqualTo annotation :
-                            field.getAnnotationsByType(NotNullIfPropertyEqualTo.class)){
+                            field.getAnnotationsByType(NotNullIfPropertyEqualTo.class)) {
                         String dependencyField = annotation.property();
-                        Object dependencyValue = BeanUtils.getProperty(bean, dependencyField);
+                        Object dependencyValue = clazz.getField(dependencyField).get(bean);
 
                         if (dependencyValue != null && !"".equals(dependencyValue)) {
                             String annotEqualsToValue = annotation.value();
