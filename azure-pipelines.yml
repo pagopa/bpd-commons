@@ -9,7 +9,7 @@ trigger:
       - master
       - release
       - develop
-      - features/*
+      - feature/*
   paths:
     include:
       - api/*
@@ -26,7 +26,7 @@ resources:
         branches:
           include:
             - develop
-            - features/*
+            - feature/*
 
 variables:
   # Agent VM image name
